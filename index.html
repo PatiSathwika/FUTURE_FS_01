@@ -712,21 +712,48 @@
           </div>
         </div>
       </div>
-      <div class="contact-form reveal reveal-delay-2">
-        <div class="form-group">
-          <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" placeholder="Jane Smith">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="jane@example.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="I'd love to collaborate on..."></textarea>
-        </div>
-        <button class="btn-primary" style="width:100%;justify-content:center;" onclick="handleSend(this)">Send Message</button>
-      </div>
+      <form action="https://formsubmit.co/patisathwika@gmail.com" method="POST" class="contact-form reveal reveal-delay-2">
+
+  <input type="hidden" name="_subject" value="New Portfolio Contact Form Message">
+  <input type="hidden" name="_captcha" value="false">
+
+  <div class="form-group">
+    <label class="form-label">Your Name</label>
+    <input
+      type="text"
+      name="name"
+      class="form-input"
+      placeholder="Your Name"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Email Address</label>
+    <input
+      type="email"
+      name="email"
+      class="form-input"
+      placeholder="your@email.com"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Message</label>
+    <textarea
+      name="message"
+      class="form-textarea"
+      placeholder="I'd love to collaborate on..."
+      required></textarea>
+  </div>
+
+<button
+ type="submit"
+ class="btn-primary"
+ style="width:100%;justify-content:center;">
+Send Message </button>
+
+</form>
+
     </div>
   </div>
 </section>
@@ -765,16 +792,7 @@
   document.querySelectorAll('#hero .reveal').forEach(el => setTimeout(() => el.classList.add('visible'), 100));
 
   // Contact form handler
-  function handleSend(btn) {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#16a34a';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
-  }
+ 
 
   // Navbar active link highlight on scroll
   const sections = document.querySelectorAll('section[id]');
